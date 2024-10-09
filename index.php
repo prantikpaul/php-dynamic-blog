@@ -18,7 +18,7 @@ if (file_exists(__DIR__ . '/autoload.php')) {
 	<!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-	<title>Source X SRT</title>
+	<title><?php echo $title["title"]; ?> </title>
 </head>
 
 <body id="home">
@@ -27,18 +27,16 @@ if (file_exists(__DIR__ . '/autoload.php')) {
 		<!--__--__--__--__--__--  L O G O  &   N A V    B A R --__--___--__--__--__-->
 		<header>
 			<div id="logo">
-				<h1>Source X <span id="iisrt"><span id="ii">II</span> <span id="srt">SRT</span></span></h1>
+				<h1><?php echo $title["title"]; ?><span id="iisrt"><span id="ii">Tech</span> <span id="srt">HUB</span></span></h1>
 				<div id="tagline">
-					<h2><?php echo $pp; ?></h2>
+					<h2><?php echo $title["des"]; ?></h2>
 				</div>
 			</div>
 			<nav>
 				<ul>
-					<li><a href="index.html" id="homenav">Home</a></li>
-					<li><a href="blog.html" id="blognav">Blog</a></li>
-					<li><a href="fullwidth.html" id="fullwidthnav">Full width</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="#">About</a></li>
+					<?php foreach ($menu as $m): ?>
+						<li><a href="<?php echo $m["link"]; ?>" id="<?php echo $m["id"]; ?>"><?php echo $m["title"]; ?></a></li>
+					<?php endforeach; ?>
 				</ul>
 			</nav>
 		</header>
@@ -64,28 +62,20 @@ if (file_exists(__DIR__ . '/autoload.php')) {
 		<section>
 			<div id="line">
 				<div class="dline"></div>
-				<h1>Our Services</h1>
+				<h1>
+					<?php echo $service["title"]; ?>
+				</h1>
 				<div class="dline"></div>
 			</div>
 			<div id="ourserv">
-				<article>
-					<h1>Web Design</h1>
-					<img src="images/1.jpg" alt="" />
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet.</p>
-					<a href="fullwidth.html" class="rm">Read More</a>
-				</article>
-				<article>
-					<h1>Graphic Design</h1>
-					<img src="images/2.jpg" alt="" />
-					<p>Consectetuer adipiscing elit. Suspendisse enim elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit.</p>
-					<a href="fullwidth.html" class="rm">Read More</a>
-				</article>
-				<article class="lastarticle">
-					<h1>Web Development</h1>
-					<img src="images/3.jpg" alt="" />
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit enim.</p>
-					<a href="fullwidth.html" class="rm">Read More</a>
-				</article>
+				<?php foreach ($service['cat'] as $c) : ?>
+					<article>
+						<h1><?php echo $c["title"]; ?></h1>
+						<img src="<?php echo $c["pic"]; ?>" alt="" />
+						<p><?php echo $c["des"]; ?></p>
+						<a href="<?php echo $c["link"]; ?>" class="rm">Read More</a>
+					</article>
+				<?php endforeach ?>
 			</div>
 			<div id="sline">
 				<div class="sdline"></div>
