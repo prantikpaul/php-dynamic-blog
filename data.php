@@ -10,7 +10,7 @@ $menu = [
     [
         "title" => "Home",
         "id" => "homenav",
-        "link" => "#"
+        "link" => "index.php"
     ],
     [
         "title" => "About Us",
@@ -25,7 +25,7 @@ $menu = [
     [
         "title" => "Blog",
         "id" => "blognav",
-        "link" => "#"
+        "link" => "blog.php"
     ]
 ];
 
