@@ -1,7 +1,7 @@
 <?php
 
-if (file_exists(__DIR__ . '/autoload.php')) {
-    require_once __DIR__ . '/autoload.php';
+if (file_exists(__DIR__ . '/../autoload.php')) {
+    require_once __DIR__ . '/../autoload.php';
 }
 ?>
 
@@ -10,11 +10,11 @@ if (file_exists(__DIR__ . '/autoload.php')) {
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/css/default/default.css" type="text/css" media="screen" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script src="assets/jquery.nivo.slider.pack.js" type="text/javascript"></script>
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->

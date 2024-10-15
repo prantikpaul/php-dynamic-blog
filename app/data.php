@@ -20,7 +20,7 @@ $menu = [
     [
         "title" => "Contact",
         "id" => "contactnav",
-        "link" => "#"
+        "link" => "contact.php"
     ],
     [
         "title" => "Blog",
